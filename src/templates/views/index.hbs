@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather | Home</title>
+    <link rel="icon" href="img/weathericon.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Retrieve instant, accurate weather information for
+            any location in the world..</p>
+
+        <form>
+            <div class="inputs">
+                <input type="text" placeholder="Enter the location..." autocomplete="off" />
+                <button id="btn" type="submit">Search</button>
+            </div>
+        </form>
+        <div class="card">
+            <p id="loc">Location</p>
+            <div class="t">
+                <p id="temp">33</p>
+                <p style="font-size: 30px;">&deg;c</p>
+            </div>
+            <p id="fc">Forecast</p>
+        </div>
+    </div>
+    {{>footer}}
+    <script src="./JS/clientSide.js"></script>
+</body>
+
+</html>
