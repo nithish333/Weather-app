@@ -5,7 +5,7 @@ const coordinates = require("./utils/geoCode");
 const weather = require("./utils/foreCast");
 //Start express
 const app = express();
-
+const port = process.env.PORT || 3000;
 //For public static path
 const publicPath = path.join(__dirname, "../public");
 //Custom views path
@@ -88,4 +88,4 @@ app.get("*", (req, res) => {
     message: "Page not found",
   });
 });
-app.listen(3000, () => console.log("Its working..."));
+app.listen(port, () => console.log("Its working..." + port));
